@@ -1,0 +1,134 @@
+// В этом файле должны быть стили для БЭМ-блока recommendations, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.recommendations {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 137px;
+  }
+
+  &__left {
+    max-width: 860px;
+    margin: 0 -20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-column-gap: 11px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+      "article best best"
+      "photo best best"
+      "photo feedback kids"
+      "old old old";
+  }
+
+  &__right {
+    max-width: 260px;
+  }
+
+  &__title {
+    font-family: $main-bold;
+    font-size: 50px;
+    margin: 64px 0 30px;
+  }
+
+  &__item {
+
+    border-radius: 3px;
+
+    h3 {
+      font-family: $main-semibold;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-family: $main-regular;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  &__item:nth-child(odd) {
+
+    box-shadow: 0px 3px 10px  $shadow-color;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  &__item:nth-child(even) {
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  &__article {
+    grid-area: article;
+    background-color: #fff;
+    padding: 22px 29px 26px;
+
+    p {
+      margin: 28px 0;
+    }
+
+    a {
+      color: $link-color;
+      font-family: $main-semibold;
+    }
+  }
+
+  &__photo {
+    grid-area: photo;
+    background: url('../img/bg1.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 127px;
+    padding-bottom: 150px;
+  }
+
+  &__feedback {
+    background-color: #fff;
+    grid-area: feedback;
+    padding: 22px 29px;
+  }
+
+  &__best {
+    grid-area: best;
+    background: url('../img/bg2.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 31px;
+  }
+
+  &__kids {
+    grid-area: kids;
+    color: #fff;
+    background-color: $svg-color;
+    padding: 22px 29px;
+  }
+
+  &__old {
+    grid-area: old;
+    background: url('../img/bg3.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 67px;
+  }
+
+  &__gift {
+    grid-area: gift;
+  }
+
+}

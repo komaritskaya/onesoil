@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока books-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.books-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 45px;
+  flex: 1;
+  max-width: 260px;
+  position: relative;
+
+  &:hover {
+
+    transition: all 0.5s;
+
+    img {
+      box-shadow: 0 10px 30px $light-color;
+    }
+
+    span {
+      color: $svg-color;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 30px;
+  }
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 610px;
+      margin: 0 auto;
+      align-items: stretch;
+      align-content: flex-start;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 100%;
+    }
+
+  }
+
+  &__description {
+    font-family: $main-italic;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: $tablet) {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__photo {
+    max-width: 260px;
+  }
+
+  &__title {
+    font-family: $main-bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    @media (min-width: $tablet) {
+      margin: 24px 0;
+    }
+
+  }
+
+  &__price {
+    font-family: $main-bold;
+    font-size: 16px;
+    line-height: 30px;
+
+
+    @media (min-width: $tablet) {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+}

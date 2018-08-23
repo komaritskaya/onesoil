@@ -1,0 +1,22 @@
+extends templates/layout-home.pug
+
+block meta
+  title Home
+  meta(name='description', content='Recommendations')
+
+//- block append head
+//-   link(rel="stylesheet", href="some.css")
+//-   script(src='some.js')
+
+block nav
+  -var selected = 'рекомендации';
+  +main-nav(selected)
+
+block content
+
+  +recommendations
+
+  +library
+
+//- block append page-bottom
+//-   script(src='some.js')

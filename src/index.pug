@@ -4,27 +4,144 @@ block meta
   title Home
   meta(name='description', content='Home page!')
 
+
 //- block append head
 //-   link(rel="stylesheet", href="some.css")
 //-   script(src='some.js')
 
+
 block nav
-  -var selected = 'blog';
+  -var selected = 'книги';
   +main-nav(selected)
 
 block content
-  p Растровые спрайты:
-    span.chrome(style="display: inline-block;")
-    span.github-logo(style="display: inline-block;")
-    span.placeholder(style="display: inline-block;")
-  hr
-  p Векторные спрайты
-    svg(width="24", height="24")
-      use(xlink:href="img/sprite-svg.svg#loupe")
-    svg(width="24", height="24")
-      use(xlink:href="img/sprite-svg.svg#rgb")
-    svg(width="24", height="24")
-      use(xlink:href="img/sprite-svg.svg#tea-cup")
+
+
+  +promo
+      +promo-item('Новое поступление книги «Симпсоны и их математические секреты»','img/book9.jpg')
+        p.promo-item__description Для поклонников сериала «Симпсоны» и для всех, кому интересна математика.
+      +promo-item('Новое поступление книги «45 татуировок менеджера»','img/book10.jpg')
+        p.promo-item__description Книга про правила российского руководителя.
+      +promo-item('Узнайте как обучить персонал с новой книгой «Пятая дисциплина»','img/book11.jpg')
+        p.promo-item__description Искусство и практика обучающейся организации.
+
+  //- -var selectedBook = 'Все';
+  //- +books-nav(selectedBook)
+  +filter
+
+  -
+    var booksList = [
+      {
+        title: 'Латеральная логика',
+        price: 500,
+        description: 'Головоломный путь к нестандартному мышлению',
+        image: '../img/book1.jpg'
+      },
+      {
+        title: 'Путеводитель по лжи',
+        price: 630,
+        description: 'Критическое мышление в эпоху постправды',
+        image: '../img/book2.jpg'
+      },
+      {
+        title: 'Дао физики',
+        price: 560,
+        description: 'Исследование параллелей между современной физикой и восточной философией',
+        image: '../img/book3.jpg'
+      },
+      {
+        title: 'Не очевидно',
+        price: 365,
+        description: 'Как выявлять тренды раньше других',
+        image: '../img/book4.jpg',
+        hide: true
+      },
+      {
+        title: 'Суперпотребители',
+        price: 365,
+        description: 'Кто это и почему они так важны для вашего бизнеса',
+        image: '../img/book5.jpg',
+        hide: true
+      },
+      {
+        title: 'Маркетинг в социальных сетях',
+        price: 630,
+        image: '../img/book6.jpg',
+        hide: true
+      },
+      {
+        title: 'Правильный выбор',
+        price: 560,
+        description: 'Практическое руководство по принятию взвешенных решений',
+        image: '../img/book7.jpg',
+        hide: true
+      },
+      {
+        title: 'Главное в истории искусств',
+        price: 500,
+        description: 'Ключевые работы, темы, направления, техники',
+        image: '../img/book8.jpg',
+        hide: true
+      }
+    ];
+
+  +books()
+    div.books-item__list
+      each book in booksList
+        +books-item(book)
+
+  +pagination()
+
+  +delivery()
+    .delivery__item
+      svg(width="52", height="40")
+        use(xlink:href="img/sprite-svg.svg#icon_book")
+      p Покупаете книги на сайте в любимом формате — бумажные, электронные или аудио.
+    .delivery__item
+      svg(width="67", height="38")
+        use(xlink:href="img/sprite-svg.svg#icon_delivery")
+      p Бесплатно доставляем заказы от 3 000  по всей России.
+    .delivery__item
+      svg(width="57", height="42")
+        use(xlink:href="img/sprite-svg.svg#icon_box")
+      p Мы подарим вам «Набор читателя» и добавим в посылку.
+    .delivery__item
+      svg(width="54", height="49")
+        use(xlink:href="img/sprite-svg.svg#icon_map")
+      p
+        | Доставка в более чем 300 городов России, по Москве и
+        br
+        | Санкт-Петербургу — бесплатно.
+
+  +new()
+
+
+
+
+
+
+
+  //-   +books-item('Латеральная логика','500','img/book4.jpg')
+  //-     p Головоломный путь к нестандартному мышлению
+  //-   +books-item('Путеводитель по лжи','630','img/book5.jpg')
+  //-     p Критическое мышление в эпоху постправды
+  //-   +books-item('Дао физики','560','img/book6.jpg')
+  //-     p Исследование параллелей между современной физикой и восточной философией
+  //-   +books-item('Не очевидно','365','img/book7.jpg')
+  //-     p Как выявлять тренды раньше других
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //- block append page-bottom
 //-   script(src='some.js')

@@ -1,9 +1,93 @@
-// В этом файле должны быть стили для БЭМ-блока promo, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// В этом файле должны быть стили для БЭМ-блока promo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий.
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .promo {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding-bottom: 110px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 100px;
+  }
+
+  &__wrap {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: $desktop) {
+      max-width: 1160px;
+    }
+  }
+
+
+
+
+  .slick-prev {
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 40px;
+    right: 50%;
+    left: auto;
+    top: auto;
+    transform: translateX(-30px);
+    z-index: 9999;
+
+    @media (min-width: $tablet) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      transform: none;
+    }
+
+    &:before {
+      content: url('../img/arrow-prev.svg');
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      background: url('../img/arrow-prev.svg') no-repeat center;
+      background-size: cover;
+    }
+
+  }
+
+  .slick-next {
+    position: absolute;
+    bottom: 40px;
+    width: auto;
+    height: auto;
+    left: 50%;
+    right: auto;
+    top: auto;
+    transform: translateX(30px);
+
+    @media (min-width: $tablet) {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+
+    &:before {
+      content:"";
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      background: url('../img/arrow-next.svg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+
 
 }

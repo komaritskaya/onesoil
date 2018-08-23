@@ -1,2 +1,9 @@
 mixin page-header()
-  div page-header
+  header.page-header
+    .page-header__container
+      .page-header__left
+        a.page-header__logo(href="../index.html")
+          img.logo(alt="logo", src="img/logo.jpg")
+        span с 9:00 до 19:00
+      .page-header__right
+        block

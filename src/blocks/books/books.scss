@@ -1,9 +1,42 @@
-// В этом файле должны быть стили для БЭМ-блока books, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока books, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .books {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__container {
+    // padding-left: 20px;
+
+    // @media (min-width: $tablet) {
+    //   padding-left: 76px;
+    // }
+  }
+
+  &__img {
+    margin: 40px 0;
+  }
+
+  &__title {
+    font-family: $main-bold;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  &__descr {
+    font-family: $main-italic;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    font-family: $main-bold;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
 }

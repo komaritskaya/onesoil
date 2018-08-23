@@ -1,0 +1,36 @@
+extends templates/layout-home.pug
+
+block meta
+  title Home
+  meta(name='description', content='Home page!')
+
+//- block append head
+//-   link(rel="stylesheet", href="some.css")
+//-   script(src='some.js')
+
+block content
+  .books(data-value="10")
+    .books__content
+      | контент
+    .books__pagination
+      | пагинация
+
+  p.game
+    | Winter is coming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- block append page-bottom
+//-   script(src='some.js')

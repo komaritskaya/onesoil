@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,19 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  font-family: $main-bold;
+  font-size: 14 px;
+  font-weight: bold;
+
+  &__list {
+    padding: 0;
+  }
+
+  ul {
+    max-width: 271px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

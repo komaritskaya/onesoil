@@ -1,20 +1,56 @@
-$main-color:          #7DCBCF; // green
-$main-color-dark:     #4AA2A5; // green dark
-$second-color:        #1F2455; // magenta
-$second-color-light:  #6A4099; // magenta light
-$warning-color:       #FDC05D; // orange
- 
-$gray-light:          #F2F2F2; 
-$gray-dark:           #231F20; 
+// COLORS
+
+$add-color:           #333333; // dark gray
+$border-color:        #e8e8e8; // light gray
+$area-color:          #dddddd; // gray
+$background-color:    #f5f5f5; // lighter gray
+$input-hover:         #ececec;
+$input-focus-bkg:     #ededed;
+$input-focus-brd:     #c6c6c6;
+
+$table-color:         #ababab; // middle gray
+$light-color:         #f4d4e4; // light pink
+
+$span-color:          #828282; // gray
+$darkest-color:       #3c3c3c; // garker gray
+$gray-dark:           #333333;
+
+$shadow-color:        #d1d1e5;
+
+
+$link-color:          #2516b7; // blue
+$link-hover:          #6c73ff; // light blue
+$link-used:           #1316b0; // dark blue
+
+$svg-color:           #d7569c; // pink
+$pressed-color:       #d72384; // bright pink
+
+
+$warning-color:       #fdc05d; // orange
+
+$gray-light:          #f2f2f2;
+
 
 $text-color:          $gray-dark;
+
+// FONTS
+
+$main-bold: 'Montserrat Bold', serif;
+$main-semibold: 'Montserrat Bold', serif;
+$main-italic: 'Montserrat Italic', serif;
+$main-regular: 'Montserrat Regular', serif;
+$main-medium: 'Montserrat Medium', serif;
+
 
 $font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 $font-size:           14px;
 $line-height:         1.4;
 
-$screen-xs:           480px;
-$screen-sm:           768px;
-$screen-md:           992px;
-$screen-lg:           1200px;
-$screen-xl:           1920px;
+
+
+// MEDIA QUERIES
+
+$tablet: 768px;
+$desktop: 1200px;
+
+

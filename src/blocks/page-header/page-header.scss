@@ -1,9 +1,114 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий.
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
 
+  background-color: #fff;
+
+  svg {
+
+    cursor: pointer;
+
+    &:hover {
+      fill: $span-color;
+      transition: all 0.3s;
+    }
+  }
+
+  .main-nav {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      flex: 2;
+    }
+
+    &__item:hover {
+      color: $span-color;
+      transition: all 0.3s;
+    }
+
+    &__item--active {
+      color: $svg-color;
+
+      &:hover {
+        color: $svg-color;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  span {
+    font-family: $main-regular;
+    color: $span-color;
+    font-size: 14px;
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &__left {
+    padding: 18px 0;
+
+    @media (min-width: $tablet) {
+      max-width: 260px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      max-width: 371px;
+      width: 100%;
+    }
+    @media (min-width: $desktop) {
+      max-width: 415px;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: 126px;
+    height: auto;
+  }
+
+  &__icons {
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: block;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
 }

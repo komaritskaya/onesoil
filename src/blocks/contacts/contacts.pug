@@ -1,20 +1,14 @@
 mixin contacts()
-  div contacts
+  div.contacts__container-first
     h2.contacts__title Контакты
     .contacts__content
       ul.contacts__list
-        li Набережная реки Фонтанки, 202
-        li с 9:00 до 19:00 ежедневно
-        li +7 (911) 123 45 67
-      .contacts__map
-      .contacts__feedback
-        h3.contacts__feedback-title
-        p Напишите нам на почту. Отвечаем в течение дня.
-        form.contacts__feedback-form
-          input
-          input
-          submit
-          input
-      .contacts__library
-        p Мы открыли для вас уютную библиотеку
-        p Приходите к нам по адресу Никитская 10, каждый деньс 12:00 до 18:00
+        li.contacts__item Набережная реки Фонтанки, 202
+        li.contacts__item с 9:00 до 19:00 ежедневно
+        li.contacts__item +7 (911) 123 45 67
+
+  +map
+
+  div.contacts__container-second
+    block
+

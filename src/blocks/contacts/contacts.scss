@@ -1,9 +1,77 @@
-// В этом файле должны быть стили для БЭМ-блока contacts, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий.
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .contacts {
 
   $block-name:                &; // #{$block-name}__element
+
+  padding: 0;
+
+  &__title {
+    font-family: $main-bold;
+    font-size: 50px;
+    margin: 25px 0 37px;
+    padding: 0;
+
+
+    @media (min-width: $tablet) {
+      margin: 35px 0 50px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 64px 0 50px;
+    }
+  }
+
+  &__content {
+    padding: 0;
+    font-family: $main-medium;
+    font-size: 16px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+      }
+    }
+
+  &__item {
+
+    max-width: 300px;
+    padding-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      margin-right: 100px;
+    }
+
+    // @media (min-width: $tablet) {
+    //   width: 50%;
+    // }
+
+    // @media (min-width: $desktop) {
+    //   width: 33%;
+    // }
+
+    &::before {
+        content: '';
+        background-color: $link-color;
+        height: 5px;
+        width: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+  }
 
 }

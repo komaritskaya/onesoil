@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока mobile-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mobile-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: none;
+  padding: 19px;
+  background-color: rgb(244, 212, 228);
+  opacity: 0.902;
+
+  &--click {
+    display: block;
+  }
+
+  svg {
+    color: inherit;
+    margin-right: 8px;
+  }
+
+  a {
+    font-size: 14px;
+    font-family: $main-bold;
+  }
+
+}

@@ -1,8 +1,10 @@
 // Это диспетчер подключений, тут не должно быть ничего, кроме импортов
 
 // Глобальные подключения
+@import './node_modules/normalize.scss/normalize.scss';
 @import 'variables.scss';
 @import 'fonts.scss';
+@import 'global.scss';
 
 // Растровый спрайт: примеси-генераторы правил
 @import './src/blocks/sprite-png/sprite-png.scss';
@@ -15,6 +17,17 @@
 @import './src/blocks/page-footer/page-footer.scss';
 @import './src/blocks/promo/promo.scss';
 @import './src/blocks/new/new.scss';
-@import './src/blocks/features/features.scss';
 @import './src/blocks/books/books.scss';
 @import './src/blocks/contacts/contacts.scss';
+@import './src/blocks/promo-item/promo-item.scss';
+@import './src/blocks/books-item/books-item.scss';
+@import './src/blocks/delivery/delivery.scss';
+@import './src/blocks/pagination/pagination.scss';
+@import './src/blocks/contacts-form/contacts-form.scss';
+@import './src/blocks/extended/extended.scss';
+@import './src/blocks/library/library.scss';
+@import './src/blocks/map/map.scss';
+@import './src/blocks/recommendations/recommendations.scss';
+@import './src/blocks/btn/btn.scss';
+@import './src/blocks/mobile-nav/mobile-nav.scss';
+@import './src/blocks/filter/filter.scss';

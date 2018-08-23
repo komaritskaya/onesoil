@@ -1,0 +1,79 @@
+mixin extended()
+  div.extended__container
+    .extended__data
+      p.extended__author Эдди Юн
+      h2.extended__title Супер
+        span -
+        |  потребители
+      p.extended__subtitle Кто это и почему они так важны для вашего бизнеса
+    .extended__gallery
+      img.extended__photo(alt="Суперпотребители", src="../img/book5.jpg")
+      .extended__previews
+        a.extended__previews-item(href="#")
+          img(src="../img/preview1.jpg", alt="preview")
+        a.extended__previews-item(href="#")
+          img(src="../img/preview2.jpg", alt="preview")
+        a.extended__previews-item(href="#")
+          img(src="../img/preview3.jpg", alt="preview")
+    .extended__numbers
+      table.extended__table
+        tr
+          td Артикул
+          td 1090763
+        tr
+          td В наличии
+          td 5 шт.
+        tr
+          td Издательство
+          td Издал
+        tr
+          td Цена
+          td 800
+      .extended__add
+        label
+          input(type="text" value="1").extended__count
+          span  шт.
+        button.btn Добавить в корзину
+      p.extended__likes
+        svg(width="16", height="13")
+          use(xlink:href="img/sprite-svg.svg#icon_heart")
+        span 20 людям понравилась эта книга
+    .extended__descr
+      h3.extended__descr-title Короткое описание
+      p.extended__descr-text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.
+      p.extended__descr-text Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.
+      a.extended__more(href="#") Показать полностью
+        svg(width="13", height="8")
+          use(xlink:href="img/sprite-svg.svg#icon_arrow")
+      .extended__descr-icons
+        .extended__descr-icon
+          svg(width="20", height="20")
+            use(xlink:href="img/sprite-svg.svg#icon-fb")
+          span 15
+        .extended__descr-icon
+          svg(width="20", height="20")
+            use(xlink:href="img/sprite-svg.svg#icon-vk")
+          span 4
+        .extended__descr-icon
+          svg(width="18", height="19")
+            use(xlink:href="img/sprite-svg.svg#icon-like")
+          span 150
+        .extended__descr-icon
+          svg(width="18", height="19")
+            use(xlink:href="img/sprite-svg.svg#icon-dislike")
+          span 0
+
+
+
+
+
+
+
+    //- img.books-extended__photo(alt= book.title,src= book.img)
+    //- h2.books-extended__title= book.title
+    //- book.desc
+    //- if book.price
+    //-   span.books-extended__price
+    //-    =  book.price
+    //-    |  &#8381;
+

@@ -13,6 +13,10 @@ html(class="no-js  page", lang="ru")
     block head
       link(rel="stylesheet", href="css/style.css")
       link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
+      //- <!-- Add the slick-theme.css if you want default styling -->
+      link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css")
+      //- <!-- Add the slick-theme.css if you want default styling -->
+      link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css")
       script.
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
@@ -20,13 +24,24 @@ html(class="no-js  page", lang="ru")
     .page__inner
       .page__content
 
-        div Тут «шапка»
+        +page-header()
           block nav
+          .page-header__icons
+            svg.page-header__cart(width="20", height="21")
+              use(xlink:href="img/sprite-svg.svg#icon_cart")
+            svg.page-header__burger(width="20", height="14")
+              use(xlink:href="img/sprite-svg.svg#icon_burger")
+            svg.page-header__phone(width="16", height="16")
+              use(xlink:href="img/sprite-svg.svg#icon-phone")
+
+
 
         block content
 
       .page__footer-wrapper
-        div Тут «подвал»
+        +page-footer()
+          block nav
 
     block page-bottom
       script(src="js/script.min.js")
+      script(type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js")

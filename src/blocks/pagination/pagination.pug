@@ -1,0 +1,11 @@
+mixin pagination(n)
+
+  -
+    var n = 1;
+
+  div.pagination__container
+    ul.pagination__list
+      while n < 11
+        li
+          a(href="#").pagination__item= n++
+
