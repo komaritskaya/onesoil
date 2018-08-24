@@ -9,7 +9,7 @@
   &__container {
     max-width: 300px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px;
     grid-template-areas:
       "data"
       "gallery"
@@ -17,6 +17,7 @@
       "descr";
 
     @media (min-width: $tablet) {
+      display: grid;
       grid-template-columns: 3fr 5fr;
       grid-column-gap: 40px;
       grid-template-areas:
@@ -49,7 +50,7 @@
 
     @media (min-width: $desktop) {
       flex-direction: row-reverse;
-      align-items: flex-start;
+      align-items: stretch;
     }
   }
 
@@ -84,18 +85,64 @@
       flex-direction: row;
       justify-content: space-around;
       border: 4px $border-color solid;
-
+      margin-top: 22px;
     }
 
     @media (min-width: $desktop) {
       flex-direction: column;
+      max-width: 160px;
+      width: 100%;
+      align-items: stretch;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+  }
+
+  &__previews-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $overlay-color;
+    padding: 40px 0;
+    display: none;
+
+    @media (min-width: $desktop) {
+      padding: 70px 0;
+    }
+  }
+
+  &__previews-item {
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+
+    &:hover {
+      .extended__previews-overlay {
+        display: block;
+      }
+    }
+  }
+
+  &__previews-item img {
+    @media (min-width: $desktop) {
+      max-width: 120px;
+      width: 100%;
+      height: auto;
     }
   }
 
   &__author {
     font-family: $main-bold;
     font-size: 14px;
-    margin: 20px 0;
+    margin-top: 20px;
+
+    @media (min-width: $tablet) {
+      margin-top: 40px;
+    }
   }
 
   &__title {
@@ -121,6 +168,16 @@
     max-width: 300px;
     height: auto;
     width: 100%;
+    margin-top: 0;
+
+    @media (min-width: $tablet) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: $tablet) {
+      max-width: 320px;
+      height: auto;
+    }
   }
 
   &__table {
@@ -129,8 +186,11 @@
     table-layout: auto;
     width: 100%;
 
-    td {
+    @media(min-width: $tablet) {
+      max-width: 250px;
+    }
 
+    td {
       width: 50%;
       padding-top: 20px;
 
@@ -142,19 +202,47 @@
 
   &__add {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media(min-width: $tablet) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 360px;
+    }
+
+    @media(min-width: $desktop) {
+      max-width: 400px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .btn {
+      @media(min-width: $tablet) {
+        max-width: 200px;
+       }
+
+      @media(min-width: $desktop) {
+        max-width: 260px;
+      }
+    }
   }
 
 
   &__count {
     font-family: $main-medium;
     font-size: 14px;
-    margin: 20px 0;
+    margin: 20px 14px 20px 0;
     border: none;
     background-color: $area-color;
-    padding: 19px 41px 19px 34px;
+    padding: 19px;
+    max-width: 80px;
     border-radius: 2px;
-    margin-right: 14px;
+    text-align: center;
 
     &:hover {
           background-color: $input-hover;
@@ -173,12 +261,16 @@
 
     margin-top: 19px;
 
-
-
     span {
       font-family: $main-italic;
       font-size: 14px;
       margin-left: 18px;
+    }
+  }
+
+  &__descr {
+    @media (min-width: $tablet) {
+      padding-left: 20px;
     }
   }
 
@@ -213,7 +305,9 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-top: 47px;
+    margin-bottom: 0;
+    max-width: 270px;
 
   }
 
@@ -224,6 +318,22 @@
 
     span {
       margin-left: 9px;
+    }
+
+    &:hover {
+      color: $svg-color;
+
+      svg {
+        fill: $svg-color;
+      }
+    }
+
+    &:visited {
+      color: $link-color;
+
+      svg {
+        fill: $link-color;
+      }
     }
   }
 }

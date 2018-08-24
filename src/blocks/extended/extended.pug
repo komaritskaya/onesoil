@@ -4,17 +4,26 @@ mixin extended()
       p.extended__author Эдди Юн
       h2.extended__title Супер
         span -
-        |  потребители
+        | потребители
       p.extended__subtitle Кто это и почему они так важны для вашего бизнеса
     .extended__gallery
       img.extended__photo(alt="Суперпотребители", src="../img/book5.jpg")
       .extended__previews
         a.extended__previews-item(href="#")
           img(src="../img/preview1.jpg", alt="preview")
+          .extended__previews-overlay
+            svg(width="16", height="16")
+              use(xlink:href="img/sprite-svg.svg#icon_plus")
         a.extended__previews-item(href="#")
           img(src="../img/preview2.jpg", alt="preview")
+          .extended__previews-overlay
+            svg(width="16", height="16")
+              use(xlink:href="img/sprite-svg.svg#icon_plus")
         a.extended__previews-item(href="#")
           img(src="../img/preview3.jpg", alt="preview")
+          .extended__previews-overlay
+            svg(width="16", height="16")
+              use(xlink:href="img/sprite-svg.svg#icon_plus")
     .extended__numbers
       table.extended__table
         tr
@@ -46,19 +55,19 @@ mixin extended()
         svg(width="13", height="8")
           use(xlink:href="img/sprite-svg.svg#icon_arrow")
       .extended__descr-icons
-        .extended__descr-icon
+        a(href="#").extended__descr-icon
           svg(width="20", height="20")
             use(xlink:href="img/sprite-svg.svg#icon-fb")
           span 15
-        .extended__descr-icon
+        a(href="#").extended__descr-icon
           svg(width="20", height="20")
             use(xlink:href="img/sprite-svg.svg#icon-vk")
           span 4
-        .extended__descr-icon
+        a(href="#").extended__descr-icon
           svg(width="18", height="19")
             use(xlink:href="img/sprite-svg.svg#icon-like")
           span 150
-        .extended__descr-icon
+        a(href="#").extended__descr-icon
           svg(width="18", height="19")
             use(xlink:href="img/sprite-svg.svg#icon-dislike")
           span 0

@@ -9,14 +9,40 @@ block meta
 //-   script(src='some.js')
 
 block content
-  .books(data-value="10")
+  .books
     .books__content
-      | контент
-    .books__pagination
-      | пагинация
+      .books__list
+        .books__item
+          strong.books__title Правила мозга
+          p.books__price 700
+        .books__item
+          strong.books__title Всегда вовремя
+          p.books__price 920
+        .books__item
+          strong.books__title Супермен по привычке
+          p.books__price 590
+        .books__item
+          strong.books__title Работа как внутренняя игра
+          p.books__price 700
+        .books__item
+          strong.books__title Дзен-камера
+          p.books__price 840
+        .books__item
+          strong.books__title Быть интровертом
+          p.books__price 680
+    button.btn.j-view-books Показать еще
+  .books__pagination
+    .books__pagination-list
+      .books__pagination-item
+        a.books__pagination-link(href="#") 1
+      .books__pagination-item
+        a.books__pagination-link(href="#") 2
+      .books__pagination-item
+        a.books__pagination-link(href="#") 3
+      .books__pagination-item
+        a.books__pagination-link(href="#") 4
 
-  p.game
-    | Winter is coming
+
 
 
 

@@ -1,4 +1,4 @@
-mixin filter()
+mixin filter(genre)
 
   -
     var genres = {
@@ -11,9 +11,11 @@ mixin filter()
 
 
 
-  //- div.filter
-  //-   ul.filter__list
-  //-     each val, key in genres
-  //-       li(class= selected.toLowerCase() === key.toLowerCase() ? 'filter__item  filter__item--active' : 'filter__item')
-  //-         a(href=val, title=key)= key
+  .filter__wrap
+    .filter__container
+      .filter__content
+        ul.filter__list
+          each val, key in genres
+            li(class= genre.toLowerCase() === key.toLowerCase() ? 'filter__item  filter__item--active' : 'filter__item')
+              a.filter__link(href=val, data-type= val)= key
 

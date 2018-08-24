@@ -11,8 +11,9 @@
 mixin books-item(book)
 
 
-    //- .books-item
-    a(href="#",class= book.hide ? 'books-item hide-mobile' : 'books-item')
+  //- .books-item
+  div(class= book.hide ? 'books-item hide-mobile' : 'books-item')
+    a.books-item__link(href="#")
       img.books-item__photo(alt= book.title,src= book.image)
       h3.books-item__title= book.title
       if book.description

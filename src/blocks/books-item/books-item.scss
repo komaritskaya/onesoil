@@ -11,23 +11,22 @@
   max-width: 260px;
   position: relative;
 
-  &:hover {
-
-    transition: all 0.5s;
-
-    img {
-      box-shadow: 0 10px 30px $light-color;
-    }
-
-    span {
-      color: $svg-color;
-    }
-  }
-
   @media (min-width: $tablet) {
     padding-bottom: 30px;
   }
 
+  &__link:hover {
+
+      transition: all 0.5s;
+
+      img {
+        box-shadow: 0 10px 30px $light-color;
+      }
+
+      span {
+        color: $svg-color;
+      }
+    }
 
   &__list {
     display: flex;

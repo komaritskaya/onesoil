@@ -1,4 +1,12 @@
 mixin recommendations()
+
+  -
+    var book = {
+      title: 'Латеральная логика',
+      description: 'Головоломный путь к нестандартному мышлению',
+      image: '../img/book1.jpg'
+    };
+
   .recommendations__container
     h2.recommendations__title Наши рекомендации
     .recommendations__content
@@ -25,6 +33,7 @@ mixin recommendations()
       .recommendations__right.recommendations__gift
           h3 Книга в подарок!
           p При вашем новом заказе мы подарим вам книгу
+            +books-item(book)
 
 
 

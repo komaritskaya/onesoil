@@ -6,6 +6,6 @@ mixin pagination(n)
   div.pagination__container
     ul.pagination__list
       while n < 11
-        li
-          a(href="#").pagination__item= n++
+        li.pagination__item
+          a(href="#").pagination__link= n++
 
