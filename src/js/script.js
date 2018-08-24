@@ -119,7 +119,7 @@ ready(function(){
       const booksItemNode = createElement('div', classItem);
       booksItemNode.innerHTML = `
         <a href="#" class="books-item__link">
-          <img class="${classPhoto}" src="../img/${items[i].uri}.png" alt="${items[i].name}">
+          <img class="${classPhoto}" src="img/${items[i].uri}.png" alt="${items[i].name}">
           <h3 class="${classTitle}">${items[i].name}</h3>
           <p class="${classDescr}">${items[i].desc}</p>
           <span class="${classPrice}">${items[i].price} &#8381;</span>
@@ -208,6 +208,8 @@ ready(function(){
       }
     };
   }
+
+  generateListener();
 
 
 
