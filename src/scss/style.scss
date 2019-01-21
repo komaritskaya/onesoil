@@ -8,26 +8,17 @@
 
 // Растровый спрайт: примеси-генераторы правил
 @import './src/blocks/sprite-png/sprite-png.scss';
-@include sprites($spritesheet-sprites); // Генератор селекторов для всех картинок спрайта
+@include sprites(
+  $spritesheet-sprites
+); // Генератор селекторов для всех картинок спрайта
 
 // БЭМ-блоки. Один БЭМ-блок = 1 файл. ВСЕГДА.
-@import './src/blocks/page/page.scss';
-@import './src/blocks/main-nav/main-nav.scss';
-@import './src/blocks/page-header/page-header.scss';
-@import './src/blocks/page-footer/page-footer.scss';
-@import './src/blocks/promo/promo.scss';
-@import './src/blocks/new/new.scss';
-@import './src/blocks/books/books.scss';
-@import './src/blocks/contacts/contacts.scss';
-@import './src/blocks/promo-item/promo-item.scss';
-@import './src/blocks/books-item/books-item.scss';
-@import './src/blocks/delivery/delivery.scss';
-@import './src/blocks/pagination/pagination.scss';
-@import './src/blocks/contacts-form/contacts-form.scss';
-@import './src/blocks/extended/extended.scss';
-@import './src/blocks/library/library.scss';
-@import './src/blocks/map/map.scss';
-@import './src/blocks/recommendations/recommendations.scss';
-@import './src/blocks/btn/btn.scss';
-@import './src/blocks/mobile-nav/mobile-nav.scss';
-@import './src/blocks/filter/filter.scss';
+@import './src/blocks/nav/nav.scss';
+@import './src/blocks/header/header.scss';
+@import './src/blocks/card/card.scss';
+@import './src/blocks/info/info.scss';
+@import './src/blocks/card-header/card-header.scss';
+@import './src/blocks/search-results/search-results.scss';
+@import './src/blocks/logo/logo.scss';
+@import './src/blocks/search-input/search-input.scss';
+@import './src/blocks/card-buttons/card-buttons.scss';

@@ -1,0 +1,15 @@
+mixin nav(selected)
+
+  -
+    var menu = {
+      'обычная': '/index.html',
+      'компактная': '/compact.html',
+      'поиск': '/search.html',
+      'результаты': 'results.html'
+    };
+
+  nav.nav
+    ul.nav__list
+      each val, key in menu
+        li(class= selected.toLowerCase() === key.toLowerCase() ? 'nav__item  nav__item--active' : 'nav__item')
+          a(href=val, title=key)= key
