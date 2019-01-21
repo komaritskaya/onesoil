@@ -320,10 +320,10 @@ gulp.task('watch:sprite:png', ['sprite:png'], reload);
 gulp.task('watch:js', ['js'], reload);
 
 // Отправка в GH pages (ветку gh-pages репозитория)
-// gulp.task('deploy', function() {
-//   return gulp.src(dirs.build + '/**/*')
-//     .pipe(ghPages());
-// });
+gulp.task('deploy', function() {
+  return gulp.src(dirs.build + '/**/*')
+    .pipe(ghPages());
+});
 
 // Перезагрузка браузера
 function reload(done) {
