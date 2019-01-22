@@ -386,29 +386,22 @@ body {
   margin: 0; }
 
 .chrome {
-  background-image: url(../img/sprite-07164915860043684.png);
+  background-image: url(../img/sprite-08690220457660094.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-07164915860043684.png);
+  background-image: url(../img/sprite-08690220457660094.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-07164915860043684.png);
+  background-image: url(../img/sprite-08690220457660094.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
-
-.nav {
-  margin: 10px; }
-  .nav__list {
-    padding: 0; }
-  .nav__item--active {
-    color: #20bf55; }
 
 .card {
   -webkit-box-shadow: 0px 2px 4px #000000;
@@ -423,7 +416,8 @@ body {
   color: #222;
   font-family: "OpenSans-Regular", serif;
   font-size: 15px;
-  line-height: 22px; }
+  line-height: 22px;
+  display: none; }
   .info__title {
     font-family: "Montserrat ExtraBold", serif;
     font-size: 24px;
@@ -456,7 +450,8 @@ body {
           align-items: center; }
 
 .search-results {
-  border-top: rgba(155, 155, 155, 0.2) solid 1px; }
+  border-top: rgba(155, 155, 155, 0.2) solid 1px;
+  display: none; }
   .search-results__list {
     margin: 0;
     padding: 0 0 20px; }
@@ -487,7 +482,8 @@ body {
   overflow: hidden;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
-          flex-grow: 2; }
+          flex-grow: 2;
+  display: none; }
   .search-input::-webkit-input-placeholder {
     color: #9b9b9b;
     font-size: 16px;
@@ -549,8 +545,6 @@ body {
         -ms-flex-align: center;
             align-items: center; }
   @media (min-width: 768px) {
-    .nav {
-      margin: 40px; }
     .card {
       margin: 40px; } }
 
