@@ -6,6 +6,7 @@
   $block-name: &; // #{$block-name}__element
 
   border-top: $border-color solid 1px;
+  display: none;
 
   &__list {
     margin: 0;

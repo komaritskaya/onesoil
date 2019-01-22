@@ -7,9 +7,8 @@
   <title>Home</title>
   <meta name="description" content="Home page!">
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-  </script>
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
 </head>
 
 <body>
@@ -19,8 +18,20 @@
         <div class="card-header">
           <div class="logo"><svg width="80" height="28">
               <use xlink:href="img/sprite-svg.svg#logo-collapsed"></use>
-            </svg></div>
+            </svg></div><input class="search-input" placeholder="Search field location" type="text"/>
           <div class="card-buttons"><a class="card-buttons__left" href="#"> <svg width="16" height="14"><use xlink:href="../../img/sprite-svg.svg#search"></use></svg></a><a class="card-buttons__right" href="#"> <svg width="11" height="8"><use xlink:href="img/sprite-svg.svg#arrow-down"></use></svg></a></div>
+        </div>
+        <div class="card-content">
+          <div class="info">
+            <h2 class="info__title">Get Map for In&nbsp;Season Nitrogen Application in&nbsp;10&nbsp;seconds</h2>
+            <p class="info__text">Find your field on&nbsp;the map or&nbsp;create a&nbsp;new border. Then click on&nbsp;the field and get the file for variable rate application for the onboard computer of&nbsp;your machinery.</p><a class="info__more" href="#">How it works</a>
+          </div>
+          <div class="search-results">
+            <ul class="search-results__list">
+              <li class="search-results__item"> <span class="search-results__item--highlighted">Min</span>sk, <span class="search-results__item--country">Belarus</span></li>
+              <li class="search-results__item"> <span class="search-results__item--highlighted">Min</span>eralnye vody, <span class="search-results__item--country">Russia</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

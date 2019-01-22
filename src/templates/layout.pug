@@ -22,10 +22,12 @@ html(class="no-js  page", lang="ru")
           +card-header()
             +logo()
               block logo
-            block search-input
+            +search-input
             +card-buttons()
               block button-right
-          block card-content
+          .card-content
+            +info()
+            +search-results()
 
     block page-bottom
       script(src="js/script.min.js")
