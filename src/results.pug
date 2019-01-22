@@ -4,15 +4,10 @@ block meta
   title Home
   meta(name='description', content='Home page!')
 
-block nav
-  -var selected = 'результаты';
-  +nav(selected)
-
 block logo
   svg(width="13", height="17")
     use(xlink:href="img/sprite-svg.svg#logo-searching")
 
-block search-input
   -var typed = 'Min'
   +search-input(typed)
 
@@ -20,5 +15,5 @@ block button-right
   svg(width="20", height="20")
     use(xlink:href="img/sprite-svg.svg#close")
 
-block card-content
+
   +search-results()

@@ -12,23 +12,22 @@ html(class="no-js  page", lang="ru")
 
     block head
       link(rel="stylesheet", href="css/style.css")
+      link(rel="shortcut icon", href="img/favicon.ico")
       script.
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
   body
     .page__inner
       .page__content     
-        +header()
-          block nav
-        +card()
-          +card-header()
-            +logo()
+        +card
+          +card-header
+            +logo
               block logo
-            block search-input
-            +card-buttons()
+            +search-input
+            +card-buttons
               block button-right
-          block card-content
+          .card-content
+            block card-content
 
     block page-bottom
       script(src="js/script.min.js")
-      script(type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js")

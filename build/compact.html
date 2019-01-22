@@ -7,36 +7,26 @@
   <title>Home</title>
   <meta name="description" content="Home page!">
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-  </script>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
 </head>
 
 <body>
   <div class="page__inner">
     <div class="page__content">
-      <header class="page-header">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="/index.html" title="обычная">обычная</a></li>
-            <li class="nav__item  nav__item--active"><a href="/compact.html" title="компактная">компактная</a></li>
-            <li class="nav__item"><a href="/search.html" title="поиск">поиск</a></li>
-            <li class="nav__item"><a href="results.html" title="результаты">результаты</a></li>
-          </ul>
-        </nav>
-      </header>
       <div class="card">
         <div class="card-header">
           <div class="logo"><svg width="80" height="28">
               <use xlink:href="img/sprite-svg.svg#logo-collapsed"></use>
-            </svg></div>
+            </svg></div><input class="search-input" placeholder="Search field location" type="text"/>
           <div class="card-buttons"><a class="card-buttons__left" href="#"> <svg width="16" height="14"><use xlink:href="../../img/sprite-svg.svg#search"></use></svg></a><a class="card-buttons__right" href="#"> <svg width="11" height="8"><use xlink:href="img/sprite-svg.svg#arrow-down"></use></svg></a></div>
         </div>
+        <div class="card-content"></div>
       </div>
     </div>
   </div>
   <script src="js/script.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
