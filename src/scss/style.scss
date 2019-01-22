@@ -13,8 +13,6 @@
 ); // Генератор селекторов для всех картинок спрайта
 
 // БЭМ-блоки. Один БЭМ-блок = 1 файл. ВСЕГДА.
-@import './src/blocks/nav/nav.scss';
-@import './src/blocks/header/header.scss';
 @import './src/blocks/card/card.scss';
 @import './src/blocks/info/info.scss';
 @import './src/blocks/card-header/card-header.scss';

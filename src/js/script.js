@@ -17,4 +17,7 @@ function ready(fn) {
   }
 }
 
-ready(function() {});
+ready(function() {
+  const searchButton = document.querySelector('.card-buttons__left');
+  const extendButton = document.querySelector('.card-buttons__right');
+});
