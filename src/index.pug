@@ -1,28 +1,7 @@
-//- extends templates/layout.pug
-
-//- block meta
-//-   title Home
-//-   meta(name='description', content='Home page!')
-
-//- block nav
-//-   -var selected = 'обычная';
-//-   +nav(selected)
-
-//- block logo
-//-   svg(width="64", height="16")
-//-     use(xlink:href="img/sprite-svg.svg#logo-extended")
-
-//- block button-right
-//-   svg(width="11", height="7")
-//-     use(xlink:href="img/sprite-svg.svg#arrow-up")
-
-//- block card-content
-//-   +info()
-
 extends templates/layout.pug
 
 block meta
-  title Home
+  title Card
   meta(name='description', content='Home page!')
 
 block logo
@@ -33,4 +12,7 @@ block button-right
   svg(width="11", height="8")
     use(xlink:href="img/sprite-svg.svg#arrow-down")
 
+block card-content
+  +info
+  +search-results
 
